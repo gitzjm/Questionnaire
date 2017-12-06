@@ -1,0 +1,237 @@
+warning: LF will be replaced by CRLF in .idea/workspace.xml.
+The file will have its original line endings in your working directory.
+[1mdiff --git a/.idea/workspace.xml b/.idea/workspace.xml[m
+[1mindex 924f8d1..6e58afb 100644[m
+[1m--- a/.idea/workspace.xml[m
+[1m+++ b/.idea/workspace.xml[m
+[36m@@ -1,7 +1,23 @@[m
+ <?xml version="1.0" encoding="UTF-8"?>[m
+ <project version="4">[m
+   <component name="ChangeListManager">[m
+[31m-    <list default="true" id="747fe091-0e44-4bb3-b792-a25d0f838bf2" name="Default" comment="" />[m
+[32m+[m[32m    <list default="true" id="747fe091-0e44-4bb3-b792-a25d0f838bf2" name="Default" comment="">[m
+[32m+[m[32m      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app01/forms.py" />[m
+[32m+[m[32m      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app01/migrations/0005_auto_20171206_1956.py" />[m
+[32m+[m[32m      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/jquery-3.2.1.min.js" />[m
+[32m+[m[32m      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/edit_questionnaire.html" />[m
+[32m+[m[32m      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/login1.html" afterPath="" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Questionnaire/settings.py" afterPath="$PROJECT_DIR$/Questionnaire/settings.py" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Questionnaire/urls.py" afterPath="$PROJECT_DIR$/Questionnaire/urls.py" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app01/models.py" afterPath="$PROJECT_DIR$/app01/models.py" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app01/templatetags/tagsb.py" afterPath="$PROJECT_DIR$/app01/templatetags/tagsb.py" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app01/views.py" afterPath="$PROJECT_DIR$/app01/views.py" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/login.html" afterPath="$PROJECT_DIR$/templates/login.html" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/new_questionnaire.html" afterPath="$PROJECT_DIR$/templates/new_questionnaire.html" />[m
+[32m+[m[32m    </list>[m
+     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />[m
+     <option name="TRACKING_ENABLED" value="true" />[m
+     <option name="SHOW_DIALOG" value="false" />[m
+[36m@@ -48,11 +64,11 @@[m
+   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />[m
+   <component name="FileEditorManager">[m
+     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">[m
+[31m-      <file leaf-file-name="login1.html" pinned="false" current-in-tab="false">[m
+[31m-        <entry file="file://$PROJECT_DIR$/templates/login1.html">[m
+[32m+[m[32m      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">[m
+[32m+[m[32m        <entry file="file://$PROJECT_DIR$/templates/login.html">[m
+           <provider selected="true" editor-type-id="text-editor">[m
+[31m-            <state relative-caret-position="494">[m
+[31m-              <caret line="26" column="42" lean-forward="false" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="42" />[m
+[32m+[m[32m            <state relative-caret-position="228">[m
+[32m+[m[32m              <caret line="15" column="17" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="16" selection-end-column="0" />[m
+               <folding />[m
+             </state>[m
+           </provider>[m
+[36m@@ -61,76 +77,46 @@[m
+       <file leaf-file-name="new_questionnaire.html" pinned="false" current-in-tab="false">[m
+         <entry file="file://$PROJECT_DIR$/templates/new_questionnaire.html">[m
+           <provider selected="true" editor-type-id="text-editor">[m
+[31m-            <state relative-caret-position="1007">[m
+[31m-              <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="54" selection-end-column="0" />[m
+[31m-              <folding />[m
+[31m-            </state>[m
+[31m-          </provider>[m
+[31m-        </entry>[m
+[31m-      </file>[m
+[31m-      <file leaf-file-name="tagsb.py" pinned="false" current-in-tab="true">[m
+[31m-        <entry file="file://$PROJECT_DIR$/app01/templatetags/tagsb.py">[m
+[31m-          <provider selected="true" editor-type-id="text-editor">[m
+[31m-            <state relative-caret-position="190">[m
+[31m-              <caret line="10" column="14" lean-forward="false" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />[m
+[31m-              <folding />[m
+[31m-            </state>[m
+[31m-          </provider>[m
+[31m-        </entry>[m
+[31m-      </file>[m
+[31m-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">[m
+[31m-        <entry file="file://$PROJECT_DIR$/Questionnaire/settings.py">[m
+[31m-          <provider selected="true" editor-type-id="text-editor">[m
+[31m-            <state relative-caret-position="722">[m
+[31m-              <caret line="38" column="33" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="41" selection-end-column="0" />[m
+[31m-              <folding />[m
+[31m-            </state>[m
+[31m-          </provider>[m
+[31m-        </entry>[m
+[31m-      </file>[m
+[31m-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">[m
+[31m-        <entry file="file://$PROJECT_DIR$/templates/index.html">[m
+[31m-          <provider selected="true" editor-type-id="text-editor">[m
+[31m-            <state relative-caret-position="551">[m
+[31m-              <caret line="29" column="57" lean-forward="false" selection-start-line="29" selection-start-column="57" selection-end-line="29" selection-end-column="57" />[m
+[32m+[m[32m            <state relative-caret-position="-76">[m
+[32m+[m[32m              <caret line="8" column="72" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="8" selection-end-column="72" />[m
+               <folding />[m
+             </state>[m
+           </provider>[m
+         </entry>[m
+       </file>[m
+[31m-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">[m
+[32m+[m[32m      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">[m
+         <entry file="file://$PROJECT_DIR$/app01/views.py">[m
+           <provider selected="true" editor-type-id="text-editor">[m
+[31m-            <state relative-caret-position="399">[m
+[31m-              <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />[m
+[32m+[m[32m            <state relative-caret-position="58">[m
+[32m+[m[32m              <caret line="68" column="65" lean-forward="true" selection-start-line="68" selection-start-column="65" selection-end-line="68" selection-end-column="65" />[m
+               <folding>[m
+[31m-                <element signature="e#0#57#0" expanded="true" />[m
+[32m+[m[32m                <element signature="e#0#59#0" expanded="true" />[m
+               </folding>[m
+             </state>[m
+           </provider>[m
+         </entry>[m
+       </file>[m
+[31m-      <file leaf-file-name="main.app01_question" pinned="false" current-in-tab="false">[m
+[31m-        <entry file="dbDummy://dbtable:/9f6bb9d9/2737c0e1-0131-4063-8d4c-533e60436f5e/main.app01_question">[m
+[31m-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">[m
+[31m-            <state>[m
+[31m-              <filtering enabled="true" />[m
+[31m-            </state>[m
+[31m-          </provider>[m
+[31m-          <provider editor-type-id="text-editor">[m
+[31m-            <state relative-caret-position="0">[m
+[31m-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />[m
+[31m-              <folding />[m
+[32m+[m[32m      <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">[m
+[32m+[m[32m        <entry file="file://$PROJECT_DIR$/app01/forms.py">[m
+[32m+[m[32m          <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m            <state relative-caret-position="57">[m
+[32m+[m[32m              <caret line="30" column="81" lean-forward="false" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="81" />[m
+[32m+[m[32m              <folding>[m
+[32m+[m[32m                <element signature="e#0#24#0" expanded="true" />[m
+[32m+[m[32m              </folding>[m
+             </state>[m
+           </provider>[m
+         </entry>[m
+       </file>[m
+[31m-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">[m
+[31m-        <entry file="file://$PROJECT_DIR$/app01/models.py">[m
+[32m+[m[32m      <file leaf-file-name="edit_questionnaire.html" pinned="false" current-in-tab="false">[m
+[32m+[m[32m        <entry file="file://$PROJECT_DIR$/templates/edit_questionnaire.html">[m
+           <provider selected="true" editor-type-id="text-editor">[m
+[31m-            <state relative-caret-position="1140">[m
+[31m-              <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="61" selection-end-column="0" />[m
+[31m-              <folding />[m
+[32m+[m[32m            <state relative-caret-position="215">[m
+[32m+[m[32m              <caret line="54" column="21" lean-forward="false" selection-start-line="54" selection-start-column="21" selection-end-line="54" selection-end-column="21" />[m
+[32m+[m[32m              <folding>[m
+[32m+[m[32m                <element signature="n#style#0;n#div#0;n#li#0;n#ol#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />[m
+[32m+[m[32m                <element signature="n#style#0;n#div#0;n#div#0;n#li#0;n#ol#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />[m
+[32m+[m[32m              </folding>[m
+             </state>[m
+           </provider>[m
+         </entry>[m
+[36m@@ -153,18 +139,21 @@[m
+     <option name="CHANGED_PATHS">[m
+       <list>[m
+         <option value="$PROJECT_DIR$/app01/admin.py" />[m
+[31m-        <option value="$PROJECT_DIR$/Questionnaire/urls.py" />[m
+[31m-        <option value="$PROJECT_DIR$/app01/models.py" />[m
+[31m-        <option value="$PROJECT_DIR$/app01/views.py" />[m
+[31m-        <option value="$PROJECT_DIR$/templates/login.html" />[m
+[31m-        <option value="$PROJECT_DIR$/templates/new_questionnaire.html" />[m
+         <option value="$PROJECT_DIR$/app01/asserts.py" />[m
+         <option value="$PROJECT_DIR$/app01/templagetags/asserts.py" />[m
+         <option value="$PROJECT_DIR$/app01/templagetags/tags.py" />[m
+         <option value="$PROJECT_DIR$/app01/templatetags/tags.py" />[m
+[31m-        <option value="$PROJECT_DIR$/Questionnaire/settings.py" />[m
+[31m-        <option value="$PROJECT_DIR$/templates/index.html" />[m
+         <option value="$PROJECT_DIR$/app01/templatetags/tagsb.py" />[m
+[32m+[m[32m        <option value="$PROJECT_DIR$/templates/login1.html" />[m
+[32m+[m[32m        <option value="$PROJECT_DIR$/templates/login.html" />[m
+[32m+[m[32m        <option value="$PROJECT_DIR$/Questionnaire/urls.py" />[m
+[32m+[m[32m        <option value="$PROJECT_DIR$/templates/index.html" />[m
+[32m+[m[32m        <option value="$PROJECT_DIR$/Questionnaire/settings.py" />[m
+[32m+[m[32m        <option value="$PROJECT_DIR$/templates/new_questionnaire.html" />[m
+[32m+[m[32m        <option value="$PROJECT_DIR$/app01/models.py" />[m
+[32m+[m[32m        <option value="$PROJECT_DIR$/app01/forms.py" />[m
+[32m+[m[32m        <option value="$PROJECT_DIR$/templates/edit_questionnaire.html" />[m
+[32m+[m[32m        <option value="$PROJECT_DIR$/app01/views.py" />[m
+       </list>[m
+     </option>[m
+   </component>[m
+[36m@@ -178,7 +167,7 @@[m
+     <option name="x" value="-8" />[m
+     <option name="y" value="-8" />[m
+     <option name="width" value="1382" />[m
+[31m-    <option name="height" value="780" />[m
+[32m+[m[32m    <option name="height" value="784" />[m
+   </component>[m
+   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />[m
+   <component name="ProjectView">[m
+[36m@@ -196,6 +185,8 @@[m
+       <foldersAlwaysOnTop value="true" />[m
+     </navigator>[m
+     <panes>[m
+[32m+[m[32m      <pane id="Scratches" />[m
+[32m+[m[32m      <pane id="Scope" />[m
+       <pane id="ProjectPane">[m
+         <subPane>[m
+           <PATH>[m
+[36m@@ -284,25 +275,23 @@[m
+           </PATH>[m
+         </subPane>[m
+       </pane>[m
+[31m-      <pane id="Scratches" />[m
+[31m-      <pane id="Scope" />[m
+     </panes>[m
+   </component>[m
+   <component name="PropertiesComponent">[m
+     <property name="settings.editor.selected.configurable" value="settings.github" />[m
+     <property name="WebServerToolWindowFactoryState" value="false" />[m
+     <property name="DefaultHtmlFileTemplate" value="HTML File" />[m
+[31m-    <property name="last_opened_file_path" value="D:/Program Files/Git/bin/git.exe" />[m
+[32m+[m[32m    <property name="last_opened_file_path" value="E:/s6day96/s6day96" />[m
+   </component>[m
+   <component name="RecentsManager">[m
+[32m+[m[32m    <key name="CopyFile.RECENT_KEYS">[m
+[32m+[m[32m      <recent name="E:\Project\Questionnaire\static" />[m
+[32m+[m[32m      <recent name="E:\Project\Questionnaire\templates" />[m
+[32m+[m[32m    </key>[m
+     <key name="MoveFile.RECENT_KEYS">[m
+       <recent name="E:\Project\Questionnaire\app01\templagetags" />[m
+       <recent name="E:\Project\Questionnaire\Questionnaire" />[m
+     </key>[m
+[31m-    <key name="CopyFile.RECENT_KEYS">[m
+[31m-      <recent name="E:\Project\Questionnaire\templates" />[m
+[31m-      <recent name="E:\Project\Questionnaire\static" />[m
+[31m-    </key>[m
+   </component>[m
+   <component name="RunDashboard">[m
+     <option name="ruleStates">[m
+[36m@@ -539,17 +528,19 @@[m
+     </todo-panel>[m
+   </component>[m
+   <component name="ToolWindowManager">[m
+[31m-    <frame x="-8" y="-8" width="1382" height="780" extended-state="0" />[m
+[32m+[m[32m    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />[m
+[32m+[m[32m    <editor active="true" />[m
+     <layout>[m
+[31m-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2685325" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />[m
+       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32852563" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />[m
+[32m+[m[32m      <window_info id="manage.py@Questionnaire" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32744783" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />[m
+       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />[m
+[31m-      <window_info id="Database" active="true" anchor="righ
