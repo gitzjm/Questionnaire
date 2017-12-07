@@ -3,9 +3,9 @@ from django import template
 register = template.Library()
 
 @register.filter
-def count(value):
+def my_count(value):
     l=[]
     for i in value:
-        l.append(value.user)
+        l.append(i.user_id)
     num=len(set(l))
     return num

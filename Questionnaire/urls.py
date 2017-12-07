@@ -20,7 +20,8 @@ from app01 import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
 
-    url(r'^login/', views.login),
-    url(r'^index/', views.index),
-    url(r'^new_questionnaire/', views.new_questionnaire),
+    url(r'^login/$', views.login),
+    url(r'^index/$', views.index),
+    url(r'^new_questionnaire/$', views.new_questionnaire),
+    url(r'^edit_questionnaire/(?P<naire_id>\d+)/$', views.edit_questionnaire,name="edit_naire"),
 ]

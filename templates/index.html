@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>主页</title>
     <link rel="stylesheet" href="/static/bootstrap-3.3.7-dist/css/bootstrap.css">
-    <script src="/static/jquery.cookie.js"></script>
     <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js "></script>
+    <script src="/static/jquery.cookie.js"></script>
     <script src="/static/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
     {% load tagsb %}
 </head>
@@ -29,10 +29,10 @@
                 <tr>
                     <td><a href="">{{ i.title }}</a></td>
                     <td>{{ i.cls.title }}</td>
-                    <td>{{ i.answer_set|count}}/{{ i.cls.student_set.count }}</td>
+                    <td>{{ i.answer_set.all|my_count}}/{{ i.cls.student_set.count }}</td>
                     <td><a href="/student/questionnaire/{{ i.id }}/{{ i.cls.id }}/">/student/evalute/{{ i.id }}/{{ i.cls.id }}/</a></td>
                     <td><a href="">查看评分</a></td>
-                    <td><button class="btn btn-success">编辑</button> <button class="btn btn-danger">删除</button></td>
+                    <td><a href="{% url "edit_naire" naire_id=i.id %}"><button class="btn btn-success">编辑</button></a> <button class="btn btn-danger">删除</button></td>
                 </tr>
             {% endfor %}
             </tbody>

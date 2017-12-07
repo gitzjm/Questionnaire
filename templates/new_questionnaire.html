@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="/static/bootstrap-3.3.7-dist/css/bootstrap.css">
-    <script src="/static/jquery.cookie.js"></script>
     <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js "></script>
+    <script src="/static/jquery.cookie.js"></script>
     <script src="/static/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
 </head>
 <body>
 <div class="container">
+    <div></div>
     <div class="col-lg-offset-1 col-lg-10">
         <table class="table table-striped">
             <thead>
@@ -27,46 +28,42 @@
                         </div>
                     </div>
                 </td>
-                <td>
-                    <a href=""><span class="pull-right glyphicon glyphicon-plus "></span></a>
-                </td>
             </tr>
             <tr>
                 <td>
-                    <div class="form-group question1">
-                        <label for="question1" class="col-sm-2 control-label">问题1:</label>
-                        <div class="col-sm-10">
-                            <textarea class="form-control" id="question1"></textarea>
+                    <label for="cls" class="col-sm-2 control-label">调查班级</label>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <select name="cls" id="cls" class="form-control">
+                                {% for class in class_list %}
+                                    <option value="{{ class.id }}">{{ class.title }}</option>
+                                {% endfor %}
+                            </select>
                         </div>
-                        <label for="question1_type" class="col-sm-2 control-label">类型</label>
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <select name="" id="question1_type" class="form-control">
-                                    <option value="1">评分(1-10分)</option>
-                                    <option value="2">单选</option>
-                                    <option value="3">建议</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <script>
-                            if ($("#question1_type").val() == 2) {
-                                $(".question1").html('<div class="row"> <div class="col-lg-offset-2">内容：<input type="text">分值: <input type="text"></div> </div>')
-                            }
-                        </script>
+                       <button class="btn-success btn sub_btn col-lg-3" >提交</button>
                     </div>
                 </td>
-                <td>
-                    <a href=""><span class="pull-right glyphicon glyphicon-plus "></span></a>
-                </td>
             </tr>
-            <tr>
-
-            </tr>
-
             </tbody>
         </table>
     </div>
 </div>
+
+<script>
+    $(".sub_btn").click(function () {
+        $.ajax({
+            url:"new_questionnaire",
+            type:"POST",
+            headers:{"X-CSRFToken":$.cookie('csrftoken')},
+            data:{
+                "title":$("#title").val(),
+                "cls":$("#cls").val()
+            },
+            success:function () {
+                location.href="/index/"
+            }
+        })
+    })
+</script>
 </body>
 </html>

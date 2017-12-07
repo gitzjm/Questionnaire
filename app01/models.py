@@ -68,8 +68,8 @@ class Option(models.Model):
     """
     问题选项表
     """
-    title = models.CharField(verbose_name="选项名", max_length=256)
-    value = models.CharField(max_length=256)
+    title = models.CharField(verbose_name="选项", max_length=256)
+    value = models.CharField(verbose_name="分值",max_length=256)
     question = models.ForeignKey(to=Question)
 
     def __str__(self):

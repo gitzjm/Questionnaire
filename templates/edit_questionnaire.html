@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/bootstrap-3.3.7-dist/css/bootstrap.css">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js "></script>
+    <script src="/static/jquery.cookie.js"></script>
+    <script src="/static/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+    <style>
+        *{
+            margin: 5px;
+        }
+        .hide {
+            display: none;
+        }
+
+        ol {
+            padding: 0;
+            list-style: none;
+            counter-reset: sectioncounter
+        }
+
+        ol > li:before {
+            content: '问题' counter(sectioncounter) ':';
+            counter-increment: sectioncounter;
+            font-size: 18px;
+            color: #d4d4d4;
+        }
+
+        ol > li:nth-of-type(odd) {
+            background-color: #f9f9f9;
+        }
+
+        li > span, div {
+            margin-left: 100px;
+        }
+
+        .del_question {
+            margin-left: 25%;
+            font-size: 20px;
+            color: gainsboro;
+        }
+
+        .del_question:hover {
+            color: #3c3c3c;
+        }
+
+        .del_option {
+            margin: 0;
+            color: gainsboro;
+        }
+
+        .del_option:hover {
+            color: #3c3c3c;
+        }
+    </style>
+</head>
+<body>
+<div class="content container">
+    <ol>
+        {% for i in questionform_list %}
+            <li>
+                <br>
+                <span>问题：</span>{{ i.form.title }}
+                <span class="glyphicon glyphicon-remove del_question"></span>
+                <br>
+                <br>
+                <span>类型：</span>{{ i.form.type }}
+                <button class="{{ i.option_class }} btn btn-sm btn-info add_option">添加选项</button>
+                <br>
+                <br>
+                <div>
+                    <ul>
+                        {% for j in i.options %}
+                            <li>
+                                {{ j.form }}
+                                <span class="glyphicon glyphicon-remove del_option"></span>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                    <br>
+                </div>
+            </li>
+        {% endfor %}
+    </ol>
+</div>
+
+<script>
+    $("body").on("click", ".add_option", function () {
+        $(this).next().children().append($(this).next().children().children().first().val("").clone())
+    });
+</script>
+
+<script>
+    $("body").on("click",".del_option,.del_question",function () {
+        $(this).parent().remove()
+    })
+</script>
+
+<script>
+        $("body").on("change",".choice_question_type",function () {
+            if ($(this).val()==2) {
+                $(this).next().removeClass("hide")
+            }
+            else {
+                $(this).next().addClass("hide");
+                $(this).next().next().html("")
+            }
+        })
+</script>
+</body>
+</html>
