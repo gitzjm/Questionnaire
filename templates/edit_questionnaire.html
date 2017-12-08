@@ -8,11 +8,17 @@
     <script src="/static/jquery.cookie.js"></script>
     <script src="/static/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
     <style>
-        *{
-            margin: 5px;
+        * {
+            font-family: "微软雅黑 Light", "Microsoft Yahei", "微软雅黑 Light", Tahoma, 'Simsun', Arial, Helvetica, sans-serif;
         }
+
         .hide {
             display: none;
+        }
+
+        h1 {
+            text-align: center;
+            margin-right: 50px;
         }
 
         ol {
@@ -43,7 +49,7 @@
         }
 
         .del_question:hover {
-            color: #3c3c3c;
+            color: rgba(215, 66, 0, 0.27);
         }
 
         .del_option {
@@ -52,62 +58,170 @@
         }
 
         .del_option:hover {
-            color: #3c3c3c;
+            color: rgba(215, 66, 0, 0.27);
+        }
+
+        .add_question, .save_question {
+            height: 100px;
+            width: 100px;
+            border: 5px solid gainsboro;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 95px;
+            font-size: 40px;
+            color: gainsboro;
+            margin-bottom: 100px;
+            display: inline-block;
+        {#            padding: 0 0 10px 2px;#}
+        }
+
+        .add_question:hover {
+            color: #c8e5bc;
+            border: 5px solid #c8e5bc;
+        }
+
+        .save_question:hover {
+            color: #b9def0;
+            border: 5px solid #b9def0;
+        }
+
+        .add_question {
+            margin-left: 35%;
         }
     </style>
 </head>
 <body>
 <div class="content container">
+    <div><h1>{{ naire.title }}</h1></div>
     <ol>
         {% for i in questionform_list %}
             <li>
                 <br>
-                <span>问题：</span>{{ i.form.title }}
-                <span class="glyphicon glyphicon-remove del_question"></span>
-                <br>
-                <br>
-                <span>类型：</span>{{ i.form.type }}
-                <button class="{{ i.option_class }} btn btn-sm btn-info add_option">添加选项</button>
-                <br>
-                <br>
-                <div>
-                    <ul>
-                        {% for j in i.options %}
-                            <li>
-                                {{ j.form }}
-                                <span class="glyphicon glyphicon-remove del_option"></span>
-                            </li>
-                        {% endfor %}
-                    </ul>
+                <div class="questions" que_id="{{ i.question.id }}">
+                    <strong>问题：</strong>{{ i.form.title }}
+                    <span class="glyphicon glyphicon-remove del_question"></span>
                     <br>
+                    <strong>类型：</strong>{{ i.form.type }}
+                    <button class="{{ i.option_class }} btn btn-sm btn-info add_option">添加选项</button>
+                    <div>
+                        <ul>
+                            {% if i.options %}
+                                {% for j in i.options %}
+                                    <li class="{{ j.option.id }}">
+                                        {{ j.form }}
+                                        <span class="glyphicon glyphicon-remove del_option"></span>
+                                    </li>
+                                {% endfor %}
+                            {% endif %}
+                        </ul>
+                        <br>
+                    </div>
+
                 </div>
             </li>
         {% endfor %}
     </ol>
+    <div class="add_question"><span class="glyphicon glyphicon-plus"></span></div>
+    <div class="save_question"><span class="glyphicon glyphicon-ok"></span></div>
+
 </div>
 
 <script>
     $("body").on("click", ".add_option", function () {
-        $(this).next().children().append($(this).next().children().children().first().val("").clone())
+        $(this).next().children().append(
+            '<li> ' +
+            '<label for="id_title">选项:</label>' +
+            '<input type="text" name="title" value="" class="form-control" ' +
+            'style="width:150px;height:30px;display:inline-block;margin:5px 0" maxlength="256" required="" id="id_title"> ' +
+            '<label for="id_value">分值:</label>' +
+            '<input type="text" name="value" value="" class="form-control" ' +
+            'style="width:150px;height:30px;display:inline-block;margin:5px 0" maxlength="256" required="" id="id_value"> ' +
+            '<span class="glyphicon glyphicon-remove del_option"></span> ' +
+            '</li>')
     });
 </script>
 
 <script>
-    $("body").on("click",".del_option,.del_question",function () {
+    $("body").on("click", ".del_option,.del_question", function () {
         $(this).parent().remove()
     })
 </script>
 
 <script>
-        $("body").on("change",".choice_question_type",function () {
-            if ($(this).val()==2) {
-                $(this).next().removeClass("hide")
+    $("body").on("change", ".choice_question_type", function () {
+        if ($(this).val() == 2) {
+            $(this).next().removeClass("hide")
+        }
+        else {
+            $(this).next().addClass("hide");
+            $(this).next().next().children().html("")
+        }
+    })
+</script>
+
+<script>
+    $(".add_question").click(function () {
+        {#        var new_question=$(this).prev().append($(this).prev().children().first(":li").clone()#}
+        {#            '<li> <br> </div>' +#}
+        {#            ' <span>问题：</span><textarea name="title" cols="40" rows="10" class="form-control" style="width:600px;height:80px;display:inline-block;vertical-align:top" maxlength="128" required="" id="id_title"></textarea> <span class="glyphicon glyphicon-remove del_question"></span>' +#}
+        {#            ' <span>类型：</span><select name="type" class="choice_question_type form-control" style="width:200px;height:35px;display:inline-block;margin:20px 0" required="" id="id_type">' +#}
+        {#            ' <option value="">---------</option> ' +#}
+        {#            '<option value="1" selected="">评分</option>' +#}
+        {#            ' <option value="2">单选</option> ' +#}
+        {#            '<option value="3" >评价</option> ' +#}
+        {#            '</select> <button class="hide btn btn-sm btn-info add_option">添加选项</button> ' +#}
+        {#            '<div> <ul></ul> <br> </div>' +#}
+        {#            '</div>' +#}
+        {#            ' </li>'#}
+        {#        );#}
+        var new_question = $("ol>li").last().clone();
+        new_question.find(".questions").attr("que_id", 'null');
+        new_question.find(":input").each(function () {
+            $(this).val("")
+        });
+        new_question.find(":button").each(function () {
+            $(this).removeClass("hide");
+            $(this).addClass("hide")
+        });
+        $("ol>li").last().after(new_question)
+    })
+</script>
+
+<script>
+    $(".save_question").click(function () {
+        var question_list = [];
+        $("ol>li").each(function () {
+            var question_dict = {"question_id": null, "title": null, "type": null, "option": null};
+            question_dict["question_id"] = $(this).find(".questions").attr("que_id");
+            if (question_dict["question_id"]=="null"){
+                question_dict["question_id"]=null
             }
-            else {
-                $(this).next().addClass("hide");
-                $(this).next().next().html("")
+            question_dict["title"] = $(this).find("textarea").val();
+            question_dict["type"] = $(this).find("select").val();
+            if ($(this).find("select").val() == 2) {
+                var option_list = [];
+                $(this).find("ul>li").each(function () {
+                    var title = $(this).find("#id_title").val();
+                    var value = $(this).find("#id_value").val();
+                    var option_id = $(this).attr("class");
+{#                    console.log(option_id);#}
+                    option_list.push({"title": title, "value": value,"option_id":option_id});
+                });
+                question_dict["option"] = option_list;
+            }
+            question_list.push(question_dict);
+        });
+        {#        console.log(question_list);#}
+        $.ajax({
+            url: "",
+            type: "POST",
+            data: {question_list: JSON.stringify(question_list)},
+            headers: {"X-CSRFToken": $.cookie('csrftoken')},
+            success: function () {
+                alert("OK")
             }
         })
+    })
 </script>
 </body>
 </html>
